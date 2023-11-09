@@ -5,4 +5,6 @@ export default defineConfig({
   themeConfig: {
     name: '@xiaomaibupor/dumi',
   },
+  base: '/workspaces-monorepo/',
+  publicPath: '/workspaces-monorepo/',
 });
