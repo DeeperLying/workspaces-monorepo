@@ -1,7 +1,7 @@
 ---
 hero:
-  title: library
-  description: my conponents ui
+  title: Super Lee
+  description: Lee's components UI
   actions:
     - text: Hello
       link: /
