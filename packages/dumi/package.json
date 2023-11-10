@@ -72,5 +72,8 @@
   },
   "authors": [
     "Lee"
-  ]
+  ],
+  "dependencies": {
+    "pnpm": "^8.10.2"
+  }
 }
