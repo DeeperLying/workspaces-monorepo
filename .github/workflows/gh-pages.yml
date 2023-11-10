@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Install pnpm
         run: npm install --global pnpm
@@ -30,13 +30,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build VuePress site
-        run: pnpm build
+      - name: Build with dumi
+        run: pnpm run docs:build
 
-      - name: Copy README.md
-        run: cp README.md dist
-
-      - name: Deploy GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
