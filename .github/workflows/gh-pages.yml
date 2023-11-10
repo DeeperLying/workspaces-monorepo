@@ -31,7 +31,7 @@ jobs:
         run: pnpm install
 
       - name: Build with dumi
-        run: pnpm run docs:build
+        run: cd packages/dumi && pnpm run docs:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
