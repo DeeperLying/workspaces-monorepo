@@ -6,5 +6,5 @@ export default defineConfig({
     name: '@xiaomaibupor/dumi',
   },
   base: '/workspaces-monorepo/',
-  publicPath: '/workspaces-monorepo/',
+  publicPath: '/workspaces-monorepo',
 });
