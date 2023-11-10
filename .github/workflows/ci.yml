@@ -12,20 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          # 如果配置 themeConfig.lastUpdated 为 false，则不需要添加该参数以加快检出速度
           fetch-depth: 0
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - name: Use Node.js with PNPM
+        uses: actions/setup-node@v2
         with:
-          node-version: 18.x
-      - name: Install dependencies
-        run: npm install
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@your-scope" # 如果有scope，替换成你的
+      - name: Install dependencies with PNPM
+        run: pnpm install
       - name: Build with dumi
-        # 文档编译命令，如果是 react 模板需要修改为 npm run docs:build
-        run: npm run docs:build
+        run: pnpm run docs:build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 文档目录，如果是 react 模板需要修改为 docs-dist
           publish_dir: ./dist-dist
