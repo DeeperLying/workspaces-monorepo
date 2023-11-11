@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm --filter=@xiaomaibupro/* run build",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "private": "true",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "father-build": "^1.22.5"
+  },
+  "dependencies": {
+    "react": "^18.0.0"
   }
 }

@@ -1,13 +1,17 @@
 {
-  "name": "@xiaomaibupro/website",
+  "name": "@xiaomaibupro/common",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "father-build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.0.0"
+  }
 }
