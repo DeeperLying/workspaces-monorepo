@@ -45,6 +45,7 @@
     ]
   },
   "dependencies": {
+    "@xiaomaibupro/common": "workspace:^",
     "pnpm": "^8.10.2"
   },
   "devDependencies": {
