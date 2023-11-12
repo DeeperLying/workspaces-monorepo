@@ -28,7 +28,7 @@ importers:
   packages/dumi:
     dependencies:
       '@xiaomaibupro/common':
-        specifier: workspace:^
+        specifier: ^1.0.0
         version: link:../../common
       pnpm:
         specifier: ^8.10.2
@@ -82,8 +82,6 @@ importers:
       stylelint:
         specifier: ^14.9.1
         version: 14.16.1
-
-  packages/pkg2: {}
 
   packages/website: {}
 
